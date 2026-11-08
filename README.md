@@ -4,8 +4,6 @@ Simulation and optimization code for **SpiRob**, a tendon-driven, spiral-inspire
 
 The central research direction is outcome-based actuation planning: instead of prescribing every intermediate configuration or contact location, the controller searches for tendon command trajectories that produce useful object-level behavior in MuJoCo.
 
-> **Repository status:** Research code, organized from working scripts. The required `model/P24.STL` mesh is now included; a clean-install end-to-end execution has **not** been verified. The paper/manuscript is intentionally **not** distributed here.
-
 ## Overview
 
 ![Research overview: robot, research gap, and framework](figures/overview.png)
