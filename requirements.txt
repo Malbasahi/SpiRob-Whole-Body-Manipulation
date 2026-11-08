@@ -1,0 +1,9 @@
+# Unpinned research dependencies: record exact tested versions before release
+numpy
+scipy
+mujoco
+cma
+scikit-learn
+matplotlib
+imageio
+imageio-ffmpeg
