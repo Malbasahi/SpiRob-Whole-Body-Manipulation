@@ -120,23 +120,9 @@ python experiments/replay_analysis.py --save-dir outputs/obstacles --no-view
 
 The scripts assume MuJoCo graphics support for interactive viewers/video; a headless environment may require additional configuration.
 
-## Research caveats and reproducibility
-
-- **Model geometry:** `model/P24.STL` is bundled and referenced by both MuJoCo XML models; an end-to-end simulation run on a clean installation has not been verified.
-- **No claim of independent reproduction:** The uploaded scripts were syntax-checked and reorganized; physics outcomes and numerical success rates were not re-measured in this packaging step.
-- **Multiple controller variants:** The main pipeline and legacy obstacle/throwing scripts use different time horizons, objectives, and policies. Do not merge their evaluation results without explicit experimental controls.
-- **Throwing release assumption:** `throwing_experiments.py` can temporarily reduce the simulated object friction during release. Clearly identify these trials as exploratory rather than evidence of an unmodified physical contact model.
-- **Open-loop execution:** The main task-level trajectory is executed without online object/contact feedback updates; optimization can use simulator outcomes, but execution is not a feedback controller.
-- **No bundled trained weights or datasets:** Generate them locally or publish a separately documented, permission-cleared reproducibility release.
-- **Licensing:** An MIT `LICENSE` is proposed for the software code, pending confirmation of authorized copyright holder(s) and collaborator/institutional approval. See `ASSET_RIGHTS.md` for the separately reserved CAD mesh and figure permissions.
-
 ## License and asset rights
 
 The repository code is proposed for release under the [MIT License](LICENSE), **subject to verification of ownership and authorization for all contributors**. The `LICENSE` currently uses a provisional copyright attribution; update this before publishing. Research figures and geometry are **not covered by the MIT grant**; see [ASSET_RIGHTS.md](ASSET_RIGHTS.md).
-
-## Citation
-
-This repository relates to the research manuscript **“Optimize, Learn, Refine: Whole-Body Grasping and Pick-and-Throw with a Spiral Soft Robot.”** The manuscript PDF is not included in this repository. Before public release, confirm the final publication details and add an approved citation or `CITATION.cff`.
 
 ## Maintainers and contributions
 
