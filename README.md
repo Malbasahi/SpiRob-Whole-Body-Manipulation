@@ -22,7 +22,7 @@ Examples of whole-body wrapping and object enclosure from different initial cond
 
 ![Pick-and-throw examples](figures/pick-and-throw.png)
 
-Illustrative sequences for object acquisition, contact-mediated manipulation, and release. The separate exploratory throwing script uses a simulated friction adjustment during release; see **Research caveats** below.
+Illustrative sequences for object acquisition, contact-mediated manipulation, and release. The separate exploratory throwing script uses a simulated friction adjustment during release.
 
 ## Methodology
 
@@ -64,15 +64,13 @@ SpiRob-GitHub/
 
 ## Installation
 
-Requires Python 3.10+ (suggested; exact tested environment not supplied). From the repository root:
+Requires Python 3.10+ (suggested). From the repository root:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate           # Windows: .venv\Scripts\activate
 python -m pip install -r requirements.txt
 ```
-
-**Required model asset:** `model/P24.STL` is included and referenced by both XML files. Verify that you have the right to publish the mesh before pushing this repository to a public GitHub account. The supplementary `p1.STL`, `P9.STL`, `P10.STL`, and `P24.SLDPRT` files are not used by the included XMLs and are intentionally omitted.
 
 For a quick check of Python command-generation invariants (without loading the scene), run:
 
@@ -81,8 +79,6 @@ python spirob_pipeline.py self-test
 ```
 
 ## Main workflow
-
-All commands below run from the repository root and use the included `model/P24.STL`. Make `outputs` first if you removed the provided empty directory.
 
 ```bash
 # Optimize a grasp for one object center (x, z):
@@ -105,11 +101,11 @@ These commands illustrate the interface; small optimization budgets and tiny dat
 
 ## Additional experiments
 
-The `experiments/` directory contains earlier, distinct exploratory implementations, not interchangeable drop-in stages of the main pipeline:
+The `experiments/` directory contains earlier, distinct exploratory implementations:
 
 - `obstacle_grasping.py`: object placement, deterministic obstacle placement, CMA-ES-based right-side control, and mirrored left-side replay using `SpiRob_obstacle.xml`. It writes control traces and episode summaries to `outputs/obstacles/`.
 - `throwing_experiments.py`: fixed-object-position, multi-direction / multi-speed throwing trials using separately optimized release parameters. It writes traces and summaries to `outputs/throwing/`.
-- `replay_analysis.py`: consumes saved controls **and a compatible summary JSON** from the older experiment format, and creates plots/snapshots (optional videos). It is **not** a replay tool for the main pipeline's `.npz` episodes. Example after generating obstacle output:
+- `replay_analysis.py`: consumes saved controls **and a compatible summary JSON** from the older experiment format, and creates plots/snapshots (optional videos). Example after generating obstacle output:
 
 ```bash
 python experiments/obstacle_grasping.py
