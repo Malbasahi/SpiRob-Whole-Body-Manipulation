@@ -14,7 +14,7 @@ SpiRob's two tendon inputs deform a progressively scaled spiral body. The projec
 
 ### Whole-body grasping
 
-![Grasping examples](figures/simulation_grasping_sequences_png)
+![Grasping examples](figures/simulation_grasping_sequences_.png)
 
 Examples of whole-body wrapping and object enclosure from different initial conditions.
 
