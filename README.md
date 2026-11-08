@@ -14,13 +14,13 @@ SpiRob's two tendon inputs deform a progressively scaled spiral body. The projec
 
 ### Whole-body grasping
 
-![Grasping examples](figures/simulation_grasping_sequences_.png.png)
+![Grasping examples](figures/simulation_grasping_sequences_png)
 
 Examples of whole-body wrapping and object enclosure from different initial conditions.
 
 ### Pick-and-throw
 
-![Pick-and-throw examples](figures/simulation_throwing_sequences_.png.png)
+![Pick-and-throw examples](figures/simulation_throwing_sequences.png)
 
 Illustrative sequences for object acquisition, contact-mediated manipulation, and release. The separate exploratory throwing script uses a simulated friction adjustment during release.
 
